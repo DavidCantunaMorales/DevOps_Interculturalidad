@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+
+# Entorno virtual
+venv/
+.env
+env/
+
+# Archivos de caché y temporales
+*.cache
+*.log
+*.pid
+*.swp
+*.swo
+
+# Archivos de IDEs y editores
+.idea/
+.vscode/
+*.sublime-workspace
+
+# Archivos de base de datos
+*.sql
+*.dump
+database.db
+
+# Archivos generados por pruebas
+coverage/
+.coverage
+.pytest_cache/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de Docker (temporal, se eliminará cuando dockericemos)
+docker-compose.yml
+*.dockerignore
