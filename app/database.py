@@ -1,3 +1,5 @@
+# Database operations for the DevOps application
+
 import mysql.connector
 from mysql.connector import Error
 
