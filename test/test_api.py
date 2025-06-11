@@ -15,7 +15,7 @@ def test_cultural_greeting(client):
     response = client.get('/cultural-greeting/quito')
     assert response.status_code == 200
     assert response.get_json()['greeting'] == '¡Hola desde Quito!'
-
+# Creación de Estudiantes 
 def test_create_estudiante(client):
     response = client.post('/estudiantes', json={"nombre": "Juan", "edad": 20})
     assert response.status_code == 201
