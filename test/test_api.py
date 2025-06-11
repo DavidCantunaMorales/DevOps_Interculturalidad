@@ -37,7 +37,7 @@ def test_update_estudiante(client):
     assert put_resp.status_code == 200
     assert put_resp.get_json()['nombre'] == 'Ana Maria'
     assert put_resp.get_json()['edad'] == 23
-
+# DELETE Estudiantes
 def test_delete_estudiante(client):
     # Crear estudiante primero
     post_resp = client.post('/estudiantes', json={"nombre": "Luis", "edad": 25})
