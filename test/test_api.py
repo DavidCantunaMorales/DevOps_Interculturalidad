@@ -10,7 +10,7 @@ def client():
     app.config['TESTING'] = True
     with app.test_client() as client:
         yield client
-
+# Test desde Quito
 def test_cultural_greeting(client):
     response = client.get('/cultural-greeting/quito')
     assert response.status_code == 200
