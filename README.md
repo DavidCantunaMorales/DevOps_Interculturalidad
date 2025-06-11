@@ -12,22 +12,22 @@
 # Análisis de Colaboración
 
 ## Gráfico de Commits por Miembro
-Cada miembro del equipo (David, Luis, Mateo, Sebas) ha contribuido con al menos 5 commits en sus respectivas ramas (david_dev_quito, luis_devops_espana, mateo_tester_china, sebas_dev_cuenca). El gráfico fue generado utilizando un script de Python (generate_commit_graph.py) y refleja una distribución equitativa de commits, cumpliendo con los requisitos de la rúbrica.
+Cada miembro del equipo (David, Luis, Mateo, Sebas) ha contribuido con al menos 5 commits en sus respectivas ramas (david_dev_quito, luis_devops_espana, mateo_tester_china, sebas_dev_cuenca). Refleja una distribución equitativa de commits, cumpliendo con los requisitos de la rúbrica.
 
 ## Tiempo Promedio para Resolver PRs
-El tiempo promedio para resolver los pull requests (PRs) fue de 38 horas, calculado manualmente a partir de los PRs cerrados en el repositorio. Este valor representa el tiempo transcurrido desde la creación hasta el merge o cierre de cada PR. Para mejorar la eficiencia, recomendamos establecer un SLA (Service Level Agreement) de 24 horas para revisiones de PRs en futuros proyectos.
+El tiempo promedio para resolver los pull requests (PRs) fue de 1 hora, calculado manualmente a partir de los PRs cerrados en el repositorio. Este valor representa el tiempo transcurrido desde la creación hasta el merge o cierre de cada PR.
 
 ## Reflexiones
 
 ### ¿Cómo se resolvieron los conflictos de timezone?
 Dado que el equipo está distribuido en diferentes zonas horarias (Quito, España, China, Cuenca), implementamos las siguientes estrategias para coordinar el trabajo:
 
-- **Comunicación asíncrona**: Utilizamos GitHub Discussions para acordar horarios de merge, definiendo ventanas de tiempo comunes (por ejemplo, 10:00-12:00 UTC).
+- **Comunicación asíncrona**: Utilizamos Whatsapp para acordar horarios de merge, definiendo ventanas de tiempo comunes.
 - **Notificaciones automáticas**: Configuramos GitHub Actions para enviar alertas a través de Slack o correo electrónico cuando se creaba o revisaba un PR, permitiendo una respuesta rápida a pesar de las diferencias horarias.
-- **Ventana de colaboración**: Identificamos un período de 2 horas diarias (08:00-10:00 UTC) donde todos los miembros podían estar disponibles para discusiones urgentes o revisiones críticas.
+- **Ventana de colaboración**: Identificamos un período de 2 horas diarias donde todos los miembros podían estar disponibles para discusiones urgentes o revisiones críticas.
 
-### ¿Qué pasaría si el equipo en India no tiene acceso a Docker Hub?
-Si el equipo en India no tuviera acceso a Docker Hub, se presentarían los siguientes problemas y soluciones:
+### ¿Qué pasaría si el equipo en China no tiene acceso a Docker Hub?
+Si el equipo en China no tuviera acceso a Docker Hub, se presentarían los siguientes problemas y soluciones:
 
 - **Impacto**: La imposibilidad de descargar imágenes base (como python:3.9 o node:16) o de publicar imágenes generadas interrumpiría el flujo de CI/CD configurado en GitHub Actions.
 - **Soluciones**:
