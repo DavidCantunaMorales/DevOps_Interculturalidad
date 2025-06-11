@@ -27,7 +27,7 @@ def test_get_estudiantes(client):
     response = client.get('/estudiantes')
     assert response.status_code == 200
     assert isinstance(response.get_json(), list)
-
+# UPDATE Estudiantes
 def test_update_estudiante(client):
     # Crear estudiante primero
     post_resp = client.post('/estudiantes', json={"nombre": "Ana", "edad": 22})
