@@ -31,9 +31,7 @@ Si el equipo en China no tuviera acceso a Docker Hub, se presentarían los sigui
 
 - **Impacto**: La imposibilidad de descargar imágenes base (como python:3.9 o node:16) o de publicar imágenes generadas interrumpiría el flujo de CI/CD configurado en GitHub Actions.
 - **Soluciones**:
-  - **Registro local**: Configurar un registro de contenedores local, como Harbor o Nexus, para almacenar imágenes y reducir la dependencia de Docker Hub.
   - **Imágenes pre-descargadas**: Proveer imágenes base pre-descargadas en un almacenamiento interno accesible para el equipo en India.
-  - **Registros alternativos**: Utilizar registros públicos como GitHub Container Registry (ghcr.io) o Amazon ECR, si están disponibles en la región.
   - **Construcción offline**: Modificar el Dockerfile para usar paquetes locales o cachés, aunque esto podría limitar la portabilidad.
 
 **Recomendación**: Incluir un plan de contingencia en el README del proyecto, con instrucciones claras para configurar un registro alternativo en caso de restricciones de acceso.
@@ -44,9 +42,3 @@ Este proyecto nos permitió experimentar con un flujo DevOps completo en un ento
 - **Convenciones claras**: Las ramas nombradas por región (david_dev_quito, sebas_dev_cuenca, etc.) facilitaron el seguimiento del trabajo, pero requirieron una convención estricta para evitar conflictos.
 - **Automatización eficiente**: La configuración de GitHub Actions para pruebas automáticas y builds de Docker redujo errores manuales, aunque demandó tiempo inicial para su correcta implementación.
 - **Colaboración intercultural**: Adaptarnos a diferentes zonas horarias y estilos de trabajo nos enseñó a ser más empáticos y precisos en la comunicación. Por ejemplo, los comentarios en los PRs debían ser detallados para evitar malentendidos entre regiones.
-
-## Propuestas de mejora
-- Implementar asignaciones automáticas de revisores en GitHub Actions para agilizar las revisiones de PRs.
-- Usar un tablero Kanban en GitHub Projects para visualizar el progreso del equipo y mejorar la coordinación.
-- Documentar mejor las dependencias del proyecto (como acceso a Docker Hub) para anticipar problemas en entornos restringidos.
-
