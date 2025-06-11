@@ -14,13 +14,13 @@ def client():
 def test_cultural_greeting(client):
     response = client.get('/cultural-greeting/quito')
     assert response.status_code == 200
-    assert response.get_json()['greeting'] == '¡Hola desde Quito!'
+    assert response.get_json()['greeting'] == '¡Hola desde Quito - Ecuador!'
 
 def test_create_estudiante(client):
-    response = client.post('/estudiantes', json={"nombre": "Juan", "edad": 20})
+    response = client.post('/estudiantes', json={"nombre": "Juan Pepe", "edad": 20})
     assert response.status_code == 201
     data = response.get_json()
-    assert data['nombre'] == 'Juan'
+    assert data['nombre'] == 'Juan Pepe'
     assert data['edad'] == 20
 
 def test_get_estudiantes(client):
