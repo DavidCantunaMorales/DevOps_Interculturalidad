@@ -22,7 +22,7 @@ def test_create_estudiante(client):
     data = response.get_json()
     assert data['nombre'] == 'Juan'
     assert data['edad'] == 20
-
+# GET Estudiantes
 def test_get_estudiantes(client):
     response = client.get('/estudiantes')
     assert response.status_code == 200
