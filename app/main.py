@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request
-from database import init_db, create_estudiante, get_all_estudiantes, get_estudiante, update_estudiante, delete_estudiante
+from app.database import init_db, create_estudiante, get_all_estudiantes, get_estudiante, update_estudiante, delete_estudiante
 
 app = Flask(__name__)
 
@@ -10,10 +10,10 @@ init_db()
 @app.route('/cultural-greeting/<country>')
 def cultural_greeting(country):
     greetings = {
-        'quito': '¡Hola desde Quito!',
-        'espana': '¡Hola desde España!',
-        'china': 'Ni hao!',
-        'cuenca': '¡Saludos desde Cuenca!'
+        'quito': '¡Hola desde Quito - Ecuador!',
+        'espana': '¡Hola desde Barcelona - España!',
+        'china': 'Ni hao, Sage!',
+        'cuenca': '¡Saludos desde Cuenca - Ecuador!',
     }
     greeting = greetings.get(country.lower(), 'Hello!')
     return jsonify({"country": country, "greeting": greeting})
