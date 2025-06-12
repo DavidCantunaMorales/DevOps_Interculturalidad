@@ -1,15 +1,16 @@
 # Database operations for the DevOps application
 
 import mysql.connector
+import os
 from mysql.connector import Error
 
 def init_db():
     try:
         conn = mysql.connector.connect(
-            host='localhost',
-            user='root',
-            password='',
-            database='devops_db'
+            host=os.getenv('DB_HOST', 'localhost'),
+            user=os.getenv('DB_USER', 'root'),
+            password=os.getenv('DB_PASSWORD', ''),
+            database=os.getenv('DB_NAME', 'devops_db')
         )
         c = conn.cursor()
         c.execute('''
