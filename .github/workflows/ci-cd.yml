@@ -38,6 +38,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Set environment variables
+      run: |
+        echo "DB_HOST=127.0.0.1" >> $GITHUB_ENV
+        echo "DB_USER=root" >> $GITHUB_ENV
+        echo "DB_PASSWORD=root" >> $GITHUB_ENV
+        echo "DB_NAME=devops_db" >> $GITHUB_ENV
     - name: Wait for MySQL to be ready
       run: |
         sleep 20  # Esperar mientras MySQL inicia
